@@ -13,6 +13,7 @@ if has("win32") || has("win16")
 	let $scrapbook = "D:\\Documents\\Work\\Resources\\scrapbook.textile"
 else
 	let osys=system('uname -s')
+	set guifont=Monospace\ 9
 	let $vimrc = $HOME."/.vimrc"
 	set backupdir=~/tmp
 	set dir=~/tmp
@@ -75,5 +76,3 @@ au BufNewFile,BufRead *.l set filetype=picolisp
 au BufRead,BufNewFile *.go set filetype=go
 au BufNewFile,BufRead *.nim set filetype=nimrod
 au BufNewFile,BufRead *.coffee set filetype=coffee
-au BufNewFile,BufRead *.less set filetype=less
-au BufNewFile,BufRead *.md,*.markdown set filetype=markdown
