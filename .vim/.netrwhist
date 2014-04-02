@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/h3rald/Dropbox/Documents/Incubator/StructDoc'
-let g:netrw_dirhist_2='/Users/h3rald/Development/nimrod'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/h3rald/Development/h3rald/content/styles'
+let g:netrw_dirhist_2='/Users/h3rald/Development/nimstore'
+let g:netrw_dirhist_3='/Users/h3rald/Development'
+let g:netrw_dirhist_4='/Users/h3rald/Development/hastyscribe'
