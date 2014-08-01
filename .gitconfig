@@ -5,4 +5,13 @@
 	graph = log --graph --pretty=oneline --abbrev-commit
 	graph-ext = log --graph --pretty=medium --abbrev-commit
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/h3rald/.gitignore
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
