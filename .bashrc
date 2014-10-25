@@ -106,4 +106,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
-export PATH=$PATH:$HOME/bin
+export PATH=/usr/local/sbin:/usr/local/bin:$HOME/bin:$HOME/.babel/bin:$PATH
