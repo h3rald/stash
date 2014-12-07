@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-require 'rubygems'
-require 'highline/import'
 require 'pathname'
 
 @stash = Pathname.new Dir.pwd
@@ -13,7 +11,9 @@ unless (['setup.rb', '.vimrc', '.inputrc'] - @stash.children.map{|c| c.basename.
 end
 
 def overwrite_file(file)
-  agree("=> Overwrite '#{@home}/#{file}'? ")
+  puts "=> Overwrite '#{@home}/#{file}'? [y/n]"
+  print "> "
+   return (gets =~ /ye?s?/i) ? true : false
 end
 
 def symlink_file(stash_file)
