@@ -4,7 +4,7 @@ require 'pathname'
 @stash = Pathname.new Dir.pwd
 @home = Pathname.new ENV['HOME']
 @tmp = Pathname.new "#{@home}/tmp"
-@symlinks = ['.tmux.conf', '.bashrc', '.gemrc', '.vim', '.vimrc', '.git', '.gitconfig', '.inputrc', '.gitignore']
+@symlinks = ['.tmux.conf', '.bashrc', '.bash_login', '.gemrc', '.vim', '.vimrc', '.git', '.gitconfig', '.inputrc', '.gitignore']
 
 unless (['setup.rb', '.vimrc', '.inputrc'] - @stash.children.map{|c| c.basename.to_s}).empty? && @stash != @home then
   raise RuntimeError, "Not in stash" 
