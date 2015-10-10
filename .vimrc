@@ -45,10 +45,10 @@ set cursorline
 set cursorcolumn
 set autoindent
 set smartindent
+
+execute pathogen#infect()
 syntax on            
-filetype on        
-filetype indent on
-filetype plugin on
+filetype plugin indent on
 
 colorscheme herald
 
@@ -59,9 +59,16 @@ map! ,- ~
 map ,- ~
 map! ,s <C-V>u00A7
 imap èè <Esc>
-map <A-.> :exe ":edit ". $scrapbook <CR> 
-map <A-_> :exe ":source ". $vimrc <CR> 
-map <A-,> :exe ":edit ". $vimrc <CR> 
+"map <A-.> :exe ":edit ". $scrapbook <CR> 
+nmap • :exe ":edit ". $scrapbook <CR> 
+"map <A-_> :exe ":source ". $vimrc <CR> 
+nmap — :exe ":source ". $vimrc <CR> 
+"map <A-,> :exe ":edit ". $vimrc <CR> 
+nmap … :exe ":edit ". $vimrc <CR> 
+"nmap <A-j> :JSHint<CR>
+nmap ª :JSHint<CR>
+
+cabbrev E Explore
 
 " Filetypes
 au BufNewFile,BufRead *.textile,*.txtl set filetype=textile

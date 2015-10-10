@@ -108,3 +108,5 @@ fi
 
 export PATH=/usr/local/sbin:/usr/local/bin:$HOME/bin:$HOME/.babel/bin:$HOME/.nimble/bin:$PATH
 export EDITOR=vim
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
