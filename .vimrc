@@ -84,3 +84,4 @@ au BufNewFile,BufRead *.nim set filetype=nimrod
 au BufNewFile,BufRead *.coffee set filetype=coffee
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.md,*.markdown set filetype=markdown
+au BufNewFile,BufRead *.min set filetype=minim

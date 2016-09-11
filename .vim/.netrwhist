@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/h3rald/Development/material-pad'
-let g:netrw_dirhist_2='/Users/h3rald/Development'
-let g:netrw_dirhist_3='/Users/h3rald/Development/jimtcl'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/h3rald/Development/minim'
+let g:netrw_dirhist_2='/Users/h3rald/Development/minim/lib'
+let g:netrw_dirhist_3='/Users/h3rald/Development/stash'
+let g:netrw_dirhist_4='/Users/h3rald/Development/stash/.vim'
+let g:netrw_dirhist_5='/Users/h3rald/Development/stash/.vim/syntax'
