@@ -36,15 +36,15 @@ syntax match            minimParen            ;(\|);
 hi default link         minimComment          Comment
 hi default link         minimCommentTodo      Todo
 hi default link         minimString           String
+hi default link         minimSigilSymbol      String
 hi default link         minimNumber           Number
 hi default link         minimBoolean          Boolean
 hi default link         minimDefaultSymbol    Statement
-hi default link         minimQuote            Statement
-hi default link         minimDefaultSigil     Statement
-hi default link         minimSigilSymbol      Special
+hi default link         minimQuote            Delimiter
+hi default link         minimDefaultSigil     Delimiter
 hi default link         minimSymbol           Identifier
-hi default link         minimQuotedSymbol     Constant
 hi default link         minimBoundSymbol      Identifier
-hi default link         minimParen            Delimiter
+hi default link         minimQuotedSymbol     Special
+hi default link         minimParen            Special
 
 let b:current_syntax = "minim"
