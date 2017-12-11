@@ -83,6 +83,26 @@ alias la='ls -A'
 alias l='ls -CF'
 alias tmux='tmux -2'
 
+# systemd aliases
+
+alias sst='sudo systemctl start'
+alias ssp='sudo systemctl stop'
+alias ssr='sudo systemctl restart'
+alias sss='sudo systemctl status'
+alias sju='sudo journalctl -u'
+alias ssd='sudo systemctl daemon-reload'
+alias sse='sudo systemctl edit --full'
+alias ss='sudo systemctl'
+alias sj='sudo journalctl'
+
+# apt-get aliases
+
+alias sau='sudo apt-get update'
+alias sai='sudo apt-get install'
+alias sap='sudo apt-get upgrade'
+alias sa='sudo apt-get'
+alias sad='sudo apt-get dist-upgrade'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
