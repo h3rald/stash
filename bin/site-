@@ -1,1 +1,1 @@
-sudo rm /var/www/$1
+sudo rm /var/www/$1 && sudo rm /etc/nginx/sites-enabled/${1}.conf

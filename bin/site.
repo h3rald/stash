@@ -1,0 +1,1 @@
+sudo vim /etc/nginx/sites-available/${1}.conf
