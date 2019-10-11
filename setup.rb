@@ -4,7 +4,8 @@ require 'pathname'
 @stash = Pathname.new Dir.pwd
 @home = Pathname.new ENV['HOME']
 @tmp = Pathname.new "#{@home}/tmp"
-@symlinks = ['.tmux.conf', '.bashrc', '.bash_login', '.gemrc', '.vim', '.vimrc', '.git', '.gitconfig', '.inputrc', '.gitignore']
+@bin  = Pathname.new "#{@home}/bin"
+@symlinks = ['.tmux.conf', '.bashrc', '.bash_login', '.gemrc', '.vim', '.vimrc', '.git', '.gitconfig', '.inputrc', '.gitignore', 'bin/2bin', 'bin/cert', 'bin/site+', 'bin/site-']
 
 unless (['setup.rb', '.vimrc', '.inputrc'] - @stash.children.map{|c| c.basename.to_s}).empty? && @stash != @home then
   raise RuntimeError, "Not in stash" 
@@ -16,8 +17,8 @@ def overwrite_file(file)
    return (gets =~ /ye?s?/i) ? true : false
 end
 
-def symlink_file(stash_file)
-  file = stash_file.basename
+def symlink_file(file)
+  stash_file = @stash + file 
   home_file = @home + file
   if home_file.exist? || home_file.symlink? then
     if overwrite_file(file) then
@@ -36,10 +37,15 @@ unless @tmp.exist? then
   @tmp.mkdir
 end
 
+unless @bin.exist? then
+  # Make temporary directory
+  puts "Creating bin directory..."
+  @bin.mkdir
+end
 
 puts "Symlinking stash files..."
 @symlinks.each do |s|
-  symlink_file(@stash + s)
+  symlink_file(s)
 end
 puts "Done."
 

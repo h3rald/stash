@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/h3rald/Development/scrooge/js/components'
-let g:netrw_dirhist_2='/Users/h3rald/Development/scrooge'
-let g:netrw_dirhist_3='/Users/h3rald/Development/scrooge/js'
-let g:netrw_dirhist_4='/Users/h3rald/Development/scrooge/js/components'
-let g:netrw_dirhist_5='/Users/h3rald/Development/scrooge'
-let g:netrw_dirhist_6='/Users/h3rald/Development/scrooge/js'
-let g:netrw_dirhist_7='/Users/h3rald/Development/scrooge/js/components'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/h3rald/dev/stash/bin'
